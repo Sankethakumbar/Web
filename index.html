@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTRA 2K25 | Hackathon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="header" class="header sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-orbitron text-3xl font-bold text-white glow-text" onclick="showPage('home', event)">
+                INVENTRA 2K25
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-white hover:text-pink-500" onclick="showPage('home', event)">Home</a>
+                <a href="#about" class="nav-link text-white hover:text-pink-500" onclick="showPage('about', event)">About</a>
+                <a href="#" class="nav-link text-white hover:text-pink-500" onclick="showPage('domains', event)">Domains</a>
+                <a href="#" class="nav-link text-white hover:text-pink-500" onclick="openRegistration(event)">Register</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block text-white py-2" onclick="showPage('home', event)">Home</a>
+            <a href="#about" class="block text-white py-2" onclick="showPage('about', event)">About</a>
+            <a href="#" class="block text-white py-2" onclick="showPage('domains', event)">Domains</a>
+            <a href="#" class="block text-white py-2" onclick="openRegistration(event)">Register</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Page 1: Home -->
+        <section id="home" class="page min-h-screen flex flex-col justify-center bg-cover bg-center pt-20" style="background-color: #15183c;">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between" style="padding-left : 5px;">
+                    <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                        <p class="text-2xl md:text-3xl font-semibold text-white mt-4"><span class="text-blue-500">Registration</span> Ends <span class="text-pink-500">in</span></p> <br>
+                        <div id="countdown" class="flex justify-center md:justify-start space-x-4 mb-6">
+                            <div class="text-center"><div id="days" class="font-orbitron text-4xl md:text-6xl text-pink-500">00</div><span class="text-sm">Days</span></div>
+                            <div class="text-center"><div id="hours" class="font-orbitron text-4xl md:text-6xl text-pink-500">00</div><span class="text-sm">Hours</span></div>
+                            <div class="text-center"><div id="minutes" class="font-orbitron text-4xl md:text-6xl text-pink-500">00</div><span class="text-sm">Minutes</span></div>
+                            <div class="text-center"><div id="seconds" class="font-orbitron text-4xl md:text-6xl text-pink-500">00</div><span class="text-sm">Seconds</span></div>
+                        </div>
+                        <h1 class="font-orbitron text-5xl md:text-7xl font-black text-white uppercase glow-text">INVENTRA 2K25</h1>
+                        <h2 class="text-2xl md:text-3xl font-semibold text-white mt-4"> <span class="text-pink-500">Dare!</span> To <span class="text-blue-500">Invent.</span></h2>
+                        <p class="text-gray-300 mt-4 max-w-lg mx-auto md:mx-0">
+                            Dept of computer science and Engineering KLECET proudly presents a national-level hackathon. Compete for massive prizes and glory.
+                        </p>
+                        <button onclick="openRegistration(event)" class="mt-8 px-8 py-3 bg-pink-600 text-white font-bold rounded-full glow-button">
+                            Register Now
+                        </button>
+                    </div>
+                    <div class="md:w-2/5 flex justify-center">
+                        <img src="page1img.png" alt="Hackathon Illustration" class="w-full max-w-lg " style="border: 5px solid #15183c; box-shadow: 10px #060215; border-radius: 25px; margin-bottom: 40px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 2: About -->
+        <section id="about" class="page py-20 reveal" style="background-color: #011f44;"> <!--#011f44-->
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text" style="margin-top: 60px;">About INVENTRA</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="page2img2.png" alt="Inventra Logo" class="w-2/3 md:w-full max-w-3xl rounded-lg" style="border: 5px solid #011f44; border-radius: 50%;">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-300 leading-relaxed">
+                            About the Hackathon
+Inventra 2K25 is a 24-hour national-level hackathon that aims to spark innovation, creativity, and problem-solving among aspiring engineers and technologists. The event provides a dynamic platform where participants brainstorm unique ideas, transform them into functional prototypes, and present impactful solutions to real-world challenges. Structured in three phases—Idea Evaluation, Prototype Development, and Final Presentation—the hackathon encourages originality, teamwork, and technical excellence. Beyond coding, Inventra 2K25 is about collaboration, learning, and pushing boundaries, while enjoying an engaging environment filled with challenges, checkpoints, mentoring, and fun activities. It is an opportunity for young innovators to showcase their skills, compete with the best, and make their mark as future changemakers.
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 3: Important Dates -->
+        <section id="dates" class="page py-20 reveal">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-20 glow-text">Important Dates</h2>
+                
+                <!-- Desktop Timeline -->
+                <div class="relative hidden md:block timeline max-w-3xl mx-auto">
+                    <!-- Item 1 -->
+                    <div class="timeline-item mb-16 flex justify-start">
+                        <div class="w-2/5"></div>
+                        <div class="w-1/5 flex justify-center"><div class="timeline-dot"></div></div>
+                        <div class="w-2/5 pl-8">
+                            <div class="card p-6 rounded-lg">
+                                <h3 class="font-bold text-lg text-blue-400">Registration Starts</h3>
+                                <p class="text-white">September 22, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-item mb-16 flex justify-end">
+                        <div class="w-2/5 pr-8 text-right">
+                             <div class="card p-6 rounded-lg">
+                                <h3 class="font-bold text-lg text-blue-400">Registration & Idea Submission Closes</h3>
+                                <p class="text-white">October 10, 2025</p>
+                            </div>
+                        </div>
+                         <div class="w-1/5 flex justify-center"><div class="timeline-dot"></div></div>
+                        <div class="w-2/5"></div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="timeline-item flex justify-start">
+                        <div class="w-2/5"></div>
+                        <div class="w-1/5 flex justify-center"><div class="timeline-dot"></div></div>
+                        <div class="w-2/5 pl-8">
+                            <div class="card p-6 rounded-lg">
+                                <h3 class="font-bold text-lg text-blue-400">Selected Teams Announcement</h3>
+                                <p class="text-white">October 12, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Timeline -->
+                <div class="relative md:hidden timeline-mobile max-w-sm mx-auto">
+                     <!-- Item 1 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-[20px] top-1 transform -translate-x-1/2 w-5 h-5 bg-pink-500 rounded-full border-4 border-slate-800"></div>
+                        <div class="card p-4 rounded-lg">
+                            <h3 class="font-bold text-md text-blue-400">Registration Starts</h3>
+                            <p class="text-white text-sm">September 22, 2025</p>
+                        </div>
+                    </div>
+                     <!-- Item 2 -->
+                     <div class="relative pl-10 mb-8">
+                        <div class="absolute left-[20px] top-1 transform -translate-x-1/2 w-5 h-5 bg-pink-500 rounded-full border-4 border-slate-800"></div>
+                        <div class="card p-4 rounded-lg">
+                            <h3 class="font-bold text-md text-blue-400">Registration Ends & Idea Submission Closes</h3>
+                            <p class="text-white text-sm">October 10, 2025</p>
+                        </div>
+                    </div>
+                     <!-- Item 3 -->
+                     <div class="relative pl-10">
+                        <div class="absolute left-[20px] top-1 transform -translate-x-1/2 w-5 h-5 bg-pink-500 rounded-full border-4 border-slate-800"></div>
+                        <div class="card p-4 rounded-lg">
+                            <h3 class="font-bold text-md text-blue-400">Selected Teams Announcement</h3>
+                            <p class="text-white text-sm">October 12, 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Page 4: Overview -->
+        <section id="overview" class="page py-20 reveal">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text">Overview</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-4">Registration Rules</h3>
+                        <p class="text-4xl mb-2">💰</p>
+                        <p class="text-lg">Fee: ₹1000 per team</p>
+                        <p class="text-4xl mt-4 mb-2">👥</p>
+                        <p class="text-lg">Team Size: 4 members per team</p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-4">Event Details</h3>
+                        <p class="text-4xl mb-2">🗓️</p>
+                        <p class="text-lg">Date: Oct 18 & 19, 2025</p>
+                        <p class="text-4xl mt-4 mb-2">⏰</p>
+                        <p class="text-lg">Time: 8AM onwards</p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-4">Venue</h3>
+                        <p class="text-4xl mb-2">📍</p>
+                        <a href="https://maps.app.goo.gl/CdUfT6EThXswZaRCA" target="_blank" class="text-lg hover:text-pink-500 transition">KLECET Campus, Chikodi</a>
+                        <a href="https://maps.app.goo.gl/CdUfT6EThXswZaRCA" target="_blank"><img src="location.avif" alt="KLECET Campus Location" class="rounded-lg mt-4 w-full h-24 object-cover"></a>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                     <button onclick="showPage('domains')" class="px-8 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition duration-300">
+                        Explore Domains
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 5: Why Participate -->
+        <section id="why" class="page py-20 reveal">
+             <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text">Why Participate?</h2>
+                <p class="text-md mb-2" style="margin-bottom: 60px;">Let’s be honest, the prizes are a huge plus! We have a significant prize pool for the winning teams, along with godie kits. But beyond that, it’s about the experience: the energy of a room buzzing with creativity, the free food and caffeine to keep you going, the exclusive event swag, and the unforgettable memories.</p>
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                     <div class="card p-6 rounded-lg text-center">
+                        <p class="text-5xl mb-2">🥈</p>
+                        <h3 class="text-2xl font-bold text-gray-300">2nd Prize</h3>
+                        <p class="text-xl font-semibold">₹25,000</p>
+                    </div>
+                     <div class="card p-6 rounded-lg text-center border-4 border-yellow-400 shadow-lg shadow-yellow-400/20">
+                        <p class="text-6xl mb-2">🥇</p>
+                        <h3 class="text-3xl font-bold text-yellow-300">Grand Prize</h3>
+                        <p class="text-2xl font-bold">₹50,000</p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center">
+                        <p class="text-5xl mb-2">🥉</p>
+                        <h3 class="text-2xl font-bold text-orange-400">3rd Prize</h3>
+                        <p class="text-xl font-semibold">₹15,000</p>
+                    </div>
+                </div>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Learn and Grow</h3>
+                        <p class="text-gray-300">Hackathons are a fantastic way to sharpen your technical skills. You'll work on new technologies, experiment with different frameworks, and learn from experienced mentors.</p>
+                    </div>
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Build Your Portfolio</h3>
+                        <p class="text-gray-300">The projects you build are perfect for your portfolio, showing employers you can work under pressure and create something from scratch.</p>
+                    </div>
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Spark Innovation</h3>
+                        <p class="text-gray-300">You have the freedom to think outside the box and create something truly unique. You might even find your next big project or startup idea.</p>
+                    </div>
+                     <div class="card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-2">Network with Peers</h3>
+                        <p class="text-gray-300">Collaborate with other developers, designers, and entrepreneurs. Interact with and learn from industry experts who serve as mentors and judges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 6: Collaborative. -->
+        <section id="sponsors" class="page py-20 reveal">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text">In Association With.</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="card p-6 rounded-lg flex flex-col items-center justify-center">
+                        <a href="https://www.klecet.edu.in/"><img src="klecetlogo.jpg" alt="Sponsor 1" class="h-16 mb-4"></a>
+                        <h3 class="font-bold">KLECET</h3>
+                    </div>
+                     <div class="card p-6 rounded-lg flex flex-col items-center justify-center">
+                        <a href="https://www.nbaind.org/"><img src="nbalogo.png" alt="Sponsor 2" class="h-16 mb-4"></a>
+                        <h3 class="font-bold">NBA</h3>
+                    </div>
+                     <div class="card p-6 rounded-lg flex flex-col items-center justify-center">
+                        <a href="https://vtu.ac.in/"><img src="VTUlogo.png" alt="Sponsor 3" class="h-16 mb-4"></a>
+                        <h3 class="font-bold">VTU</h3>
+                    </div>
+                     <div class="card p-6 rounded-lg flex flex-col items-center justify-center">
+                        <a href="https://www.ieee.org/"> <img src="ieelogo.png" alt="Sponsor 4" class="h-16 mb-4"></a>
+                        <h3 class="font-bold">IEEE</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 7: Student Coordinators -->
+        <section id="coordinators" class="page py-20 reveal">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text">Student Coordinators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                        <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=PP" alt="Coordinator 1" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                        <h3 class="text-xl font-bold">Praveen Patil</h3>
+                        <p class="text-blue-400">Coordinator</p>
+                        <p class="mt-2">📞 8792946625</p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                        <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=SK" alt="Coordinator 2" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                        <h3 class="text-xl font-bold">Sanketha Kumbar</h3>
+                        <p class="text-blue-400">Coordinator</p>
+                        <p class="mt-2">📞 9986051616</p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                        <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=VS" alt="Coordinator 3" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                        <h3 class="text-xl font-bold">Vinayak Shetti</h3>
+                        <p class="text-blue-400">Coordinator</p>
+                        <p class="mt-2">📞 6366261008</p>
+                    </div>
+                    <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                        <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=SS" alt="Coordinator 4" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                        <h3 class="text-xl font-bold">Sanskriti Singh</h3>
+                        <p class="text-blue-400">Coordinator</p>
+                        <p class="mt-2">📞 7892001351</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                     <button onclick="showPage('team')" class="px-8 py-3 bg-pink-600 text-white font-bold rounded-full glow-button">
+                        Meet The Team
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Hidden Pages -->
+    <div id="hidden-pages" class="hidden">
+        <!-- Domains Page -->
+        <section id="domains-page" class="page py-20 min-h-screen">
+             <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text">Hackathon Domains</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-2 text-pink-400"> Generative AI</h3>
+                        <p>Explore the frontier of artificial intelligence! Build models that generate text, images, music, or code using AI techniques. This domain is perfect for innovators looking to create creative solutions and intelligent applications.Ideal for: AI enthusiasts, creative coders, and data scientists.</p>
+                    </div>
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-2 text-blue-400"> Supply Chain </h3>
+                        <p>Explore the future of the internet with decentralized applications, smart contracts, and new forms of digital ownership.</p>
+                    </div>
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-2 text-green-400"> Full Stack</h3>
+                        <p>Dive into the world of web and app development! Work on both frontend and backend to create complete, scalable, and user-friendly applications. This domain is perfect for those who want to turn ideas into real working products.Ideal for: Web developers, app creators, and problem-solvers. </p>
+                    </div>
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-2 text-yellow-400"> Internet Of Things</h3>
+                        <p>Connect the digital and physical worlds! Design smart devices, sensors, and systems that communicate seamlessly to automate and innovate. Ideal for building solutions for smart homes, cities, and industries. Ideal for: Hardware and software developers, innovators in automation.</p>
+                    </div>
+                    <div class="card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-2 text-indigo-400"> Cyber Security</h3>
+                        <p>Step into the shoes of a cyber defender! Identify vulnerabilities, prevent attacks, and build secure systems. This domain challenges participants to create solutions for real-world cybersecurity threats.Ideal for: Security enthusiasts, ethical hackers, and system defenders.</p>
+                    </div>
+                     <!-- <div class="card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-2 text-red-400">🎮 Gaming & Entertainment</h3>
+                        <p>Build immersive experiences, innovative game mechanics, or new platforms for digital entertainment and interaction.</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Page -->
+        <section id="team-page" class="page py-20 min-h-screen">
+            <div id="team-coordinators-container">
+                <!-- coordinators  -->
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-bold text-center mb-12 glow-text">Student Coordinators</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                            <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=PP" alt="Coordinator 1" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                             <h3 class="text-xl font-bold">Praveen Pail</h3>
+                            <p class="text-blue-400">Coordinator</p>
+                            <p class="mt-2">📞 8792946625</p>
+                        </div>
+                        <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                            <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=SK" alt="Coordinator 2" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                            <h3 class="text-xl font-bold">Sanketha Kumbar</h3>
+                            <p class="text-blue-400">Coordinator</p>
+                            <p class="mt-2">📞 9986051616</p>
+                        </div>
+                        <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                            <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=SS" alt="Coordinator 3" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                            <h3 class="text-xl font-bold">Sanskriti Singh</h3>
+                            <p class="text-blue-400">Coordinator</p>
+                            <p class="mt-2">📞 7892001351</p>
+                        </div>
+                        <div class="card p-6 rounded-lg text-center" style="background-color: #0c1427;">
+                            <img src="https://placehold.co/150x150/FFFFFF/0c1427?text=VS" alt="Coordinator 4" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500">
+                            <h3 class="text-xl font-bold">Vinayak Shetti</h3>
+                            <p class="text-blue-400">Coordinator</p>
+                            <p class="mt-2">📞 6366261008</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <button onclick="showPage('team')" class="px-8 py-3 bg-pink-600 text-white font-bold rounded-full glow-button">
+                            Meet The Team
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto px-6 mt-20">
+                <h2 class="text-4xl font-bold text-center mb-12 glow-text">Our Team</h2>
+                <div class="relative overflow-hidden">
+                    <div id="team-carousel" class="flex transition-transform duration-700 ease-in-out">
+                        <!-- Team members will be injected here by JS -->
+                    </div>
+                    <button id="prev-btn" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/20 text-white p-2 rounded-full z-10 hover:bg-white/40">&lt;</button>
+                    <button id="next-btn" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/20 text-white p-2 rounded-full z-10 hover:bg-white/40">&gt;</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Address</h3>
+                    <p><a href="https://maps.app.goo.gl/CdUfT6EThXswZaRCA" target="_blank" class="text-gray-400">K.L.E. College of Engineering & Technology Banantikodi Road, Chikodi, Belgaum, Karnataka 591201.</a></p>
+                </div>
+                 <div>
+                    <h3 class="font-bold text-lg mb-4">Support</h3>
+                    <p class="text-gray-400">📞 +91 08338257100</p>
+                    <p class="text-gray-400">✉️ inventra.klecet@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Socials</h3>
+                    <div class="flex space-x-4">
+                        <a href="# " class="text-gray-400 hover:text-pink-500 text-2xl"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/DzzQlQDXN7BF2ALnpNYWgL" class="text-gray-400 hover:text-green-500 text-2xl"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://in.linkedin.com/school/klecet/" class="text-gray-400 hover:text-blue-500 text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Links</h3>
+                     <ul>
+                        <li><a href="#home" class="text-gray-400 hover:text-white" onclick="showPage('home', event)">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white" onclick="showPage('team', event)">Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white" onclick="showPage('domains', event)">Domains</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white" onclick="showPage('about', event)">About</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white" onclick="openRegistration(event)">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 INVENTRA 2K25. Dept of Computer science and engineering <a href="https://www.klecet.edu.in/">KLECET.</a>. All Rights Reserved.</p>
+                <br>
+                <p>Designed and developed by <a href="#" target="_blank" style="color:grey;">Masoom & Praveen </a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
