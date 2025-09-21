@@ -98,6 +98,8 @@
                 { name: "Mustafeez S", role: "Financial", img: "https://placehold.co/150x150/FFFFFF/171729?text=MS" },
                 { name: "Prajwal", role: "Financial", img: "https://placehold.co/150x150/FFFFFF/171729?text=PR" },
                 { name: "Pradeep A", role: "Financial", img: "https://placehold.co/150x150/FFFFFF/171729?text=PA" },
+                 { name: "Sanskriti Singh", role: "Technical", img: "https://placehold.co/150x150/FFFFFF/171729?text=SS" },
+                { name: "Sanketha Kumbar", role: "Technical", img: "https://placehold.co/150x150/FFFFFF/171729?text=SK" },
                 { name: "Pallavi", role: "Judgement and evaluation", img: "https://placehold.co/150x150/FFFFFF/171729?text=P" },
                 { name: "Shobha M", role: "Technical", img: "https://placehold.co/150x150/FFFFFF/171729?text=SM" },
                 { name: "Aishwarya M", role: "Logistic and operation", img: "https://placehold.co/150x150/FFFFFF/171729?text=AM" },
